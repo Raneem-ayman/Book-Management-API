@@ -71,6 +71,7 @@ Response:
  Retrieves a single book by its ID.
 
 **Request**:
+```http
 GET /api/books/{id}
 Host: localhost:8000
 Accept: application/json
@@ -84,10 +85,11 @@ Accept: application/json
     "created_at": "2024-07-06T12:34:56.000000Z",
     "updated_at": "2024-07-06T12:34:56.000000Z"
 }
-
+```
 ### POST /api/books
 Create a new book
 **Request**:
+```http
 POST /api/books 
 Host: localhost:8000
 Accept: application/json
@@ -126,11 +128,12 @@ Content-Type: application/json
         ]
     }
 }
-
+```
 ### Error Handling
 All errors will return JSON responses with the following structure:
 
 **Validation Error**:
+```http
 {
     "result": "failed",
     "code": 400,
@@ -141,8 +144,9 @@ All errors will return JSON responses with the following structure:
         ]
     }
 }
-
+```
 **Not Found**:
+```http
 {
     "result": "failed",
     "code": 404,
@@ -150,7 +154,7 @@ All errors will return JSON responses with the following structure:
     "message": "Not found."
 }
 
-
+```
 
 
 
